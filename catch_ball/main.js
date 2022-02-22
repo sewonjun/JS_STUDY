@@ -4,7 +4,8 @@ const score = document.querySelector("#score");
 const context = canvas.getContext("2d");
 
 canvas.width = innerWidth;
-canvas.height = innerHeight - 3;
+//-3이라는 것은 무슨 의미가 있는가 .. 위에 score는 16px인데 .. 뭐가 연관이 있나..,? 
+canvas.height = innerHeight -3;
 
 const bubbleArray = [];
 const clickEventArray = [];
@@ -62,8 +63,6 @@ function getBubble() {
 }
 //호출 스케줄링 setInterval은 일정 시간 간격을 두고 함수를 실행시키는 방법
 setInterval(getBubble, 500);
-
-//?? 이건 그냥 안지운 코드 아닌가요 ?
 let animationId;
 
 function animate() {
